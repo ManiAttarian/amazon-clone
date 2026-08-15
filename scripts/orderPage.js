@@ -3,7 +3,7 @@ import { getProduct, products, loadProductsFetch } from "../data/products.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 import formatCurrency from "./utils/money.js";
 import { addToCart, addToCartOne } from "../data/cart.js";
-import { renderHeader } from "./header.js";
+import { renderHeader, searchProduct } from "./header.js";
 
 console.log(orders);
 
@@ -96,6 +96,7 @@ async function loadPage() {
       renderHeader();
     });
   });
+   searchProduct();
 }
 
 renderHeader();

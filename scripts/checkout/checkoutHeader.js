@@ -21,7 +21,7 @@ export function renderCheckoutHeader() {
         <div class="checkout-header-middle-section">
             Checkout (<a
             class="return-to-home-link"
-            href="amazon.html"
+            href="index.html"
             >
             ${cartQuantity} items</a
             >)

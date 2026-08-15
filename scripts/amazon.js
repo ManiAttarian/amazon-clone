@@ -11,7 +11,16 @@ function renderProductsGrid() {
 
   let productsHTML = "";
 
-  products.forEach((product) => {
+  const url = new URL(window.location.href);
+  const search = url.searchParams.get("search");
+
+  let filteredProducts = products;
+
+  if(search) {
+    filteredProducts = products.filter(product => product.name.includes(search));
+  }
+
+  filteredProducts.forEach((product) => {
     productsHTML += `
         <div class="product-container">
           <div class="product-image-container">

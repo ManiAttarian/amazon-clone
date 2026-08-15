@@ -1,7 +1,7 @@
 import { getOrder } from "../data/orders.js";
 import { getProduct, loadProductsFetch } from "../data/products.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
-import { renderHeader } from "./header.js";
+import { renderHeader, searchProduct } from "./header.js";
 
 async function loadPage() {
   await loadProductsFetch();
@@ -58,6 +58,8 @@ async function loadPage() {
   `;
 
   document.querySelector(".js-order-tracking").innerHTML = trackingHTML;
+
+   searchProduct();
 }
 renderHeader();
 loadPage();
